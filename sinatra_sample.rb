@@ -22,12 +22,3 @@ def get_point(point, comment)
   file.puts(post)
   file.close
 end
-
-def show_result
-  puts "これまでの結果"
-  read_file = File.open("data.txt", "r")
-  read_file.each {|line|
-    print line
-  }
-  read_file.close
-end
