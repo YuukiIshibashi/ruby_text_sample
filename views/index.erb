@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DIC cafe</title>
+    <link href="css/nomalize.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/contact.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Sawarabi+Mincho" rel="stylesheet">
+  </head>
+  <body>
+    <header class="header">
+      <a href="index.html"><img src="image/sample_logo_k.png" class="logo"></a>
+      <nav>
+        <ul class="global_nav">
+          <a href="index.html" class="global_nav_item">
+            <li>Home</li>
+          </a>
+          <a href="blueberry_pancakes.html" class="global_nav_item">
+            <li>Menu</li>
+          </a>
+          <a href="contact.html" class="global_nav_item">
+            <li>Contact</li>
+          </a>
+        </ul>
+      </nav>
+    </header>
+    <div class="menu_key section_inner">
+    </div>
+    <section class="section_inner">
+      <div class="section_title">
+        <h1>BOARD</h1>
+        <p>掲示板</p>
+      </div>
+      <form action="sample" method="POST">
+        <table class="contact">
+          <tr class="contact_line">
+            <th class="contact_sign">ポイント</th>
+            <td>
+              <input type="radio" name="point" value="1" checked="checked">1
+              <input type="radio" name="point" value="2">2
+              <input type="radio" name="point" value="3">3
+              <input type="radio" name="point" value="4">4
+              <input type="radio" name="point" value="5">5
+            </td>
+          </tr>
+          <tr class="contact_content">
+            <th class="contact_sign">コメント</th>
+            <td class="contact_input"><textarea name="comment" value=""></textarea></td>
+          </tr>
+        </table>
+        <div class="contact_btn_area">
+          <input type="reset" class="contact_btn reset_btn" value="リセット">
+          <input type="submit" class="contact_btn submit_btn" value="送信する">
+        </div>
+      </form>
+    </section>
+    <section class="section_inner post_area">
+      <% @posts.each do |post| %>
+        <p class="post_item"><%= post %></p>
+      <% end %>
+    </section>
+    <footer class="footer">
+      <nav>
+        <ul class="footer_nav">
+          <a href="index.html" class="footer_nav_item">
+            <li>Home</li>
+          </a>
+          <a href="blueberry_pancakes.html" class="footer_nav_item">
+            <li>Menu</li>
+          </a>
+          <a href="contact.html" class="footer_nav_item">
+            <li>Contact</li>
+          </a>
+          <a href="contact.html" class="footer_nav_item">
+            <li>
+              <img src="image/sample_logo_w.png" class="footer_logo">
+            </li>
+          </a>
+        </ul>
+      </nav>
+      <p class="footer_right">© DIVE INTO CODE Corp. All RIGHTS RESERVED.</p>
+    </footer>
+  </body>
+</html>
